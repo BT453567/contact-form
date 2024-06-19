@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png">
+    <title>Contact Form</title>
+</head>
+<body>
+    <main>
+        <form id="contactForm" class="form-container" novalidate>
+            <h1>Contact Us</h1>
+
+            <div class="name-container">
+                <div class="input-container">
+                    <label for="firstName">First Name<span> *</span></label>
+                    <input class="text-input" id="firstName" type="text">
+                    <p id="firstNameError" class="error hidden">This field is required</p>
+                </div>
+                <div class="input-container">
+                    <label for="lastName">Last Name<span> *</span></label>
+                    <input class="text-input" id="lastName" type="text">
+                    <p id="lastNameError" class="error hidden">This field is required</p>
+                </div>
+            </div>
+
+            <div class="input-container div-space">
+                <label for="emailAddress">Email address<span> *</span></label>
+                <input id="emailAddress" class="text-input" type="text">
+                <p id="emailAddressError" class="error hidden">Please enter a valid email address</p>
+            </div>
+
+            <div class="div-space">
+                <label for="queryType">Query Type<span> *</span></label>
+                    <div id="queryType" class="query-container">
+                        <div class="query-input">
+                            <input type="radio" name="queryType" id="generalEnquiry" value="general">
+                            <label for="generalEnquiry" class="cursor">General Enquiry</label>
+                        </div>
+                        <div class="query-input">
+                            <input type="radio" name="queryType" id="supportEnquiry" value="support">
+                            <label for="supportEnquiry" class="cursor">Support Enquiry</label>
+                        </div>
+                    </div>
+                    <p id="queryTypeError" class="error hidden">Please select a query type</p>
+            </div>
+
+            <div class="input-container div-space">
+                <label for="largeTextInput">Message <span> *</span></label>
+                <textarea id="largeTextInput"></textarea>
+                <p id="largeTextError" class="error hidden">This field is required</p>
+            </div>
+
+            <div class="checkbox-container">
+                <input id="consentCheckbox" type="checkbox" name="consentCheckbox">
+                <label for="consentCheckbox" class="cursor">I consent to being contacted by the team <span> *</span></label>
+            </div>
+
+            <p id="consentError" class="error hidden">To submit this form, please consent to being contacted</p>
+
+            <button type="submit">Submit</button>
+
+
+        </form>
+    </main>
+
+    <!-- Transparent overlay for success message -->
+
+    <div id="overlay" class="overlay hidden">
+        <div class="success-container">
+            <div class="message-sent-container">
+                <img src="./assets/images/icon-success-check.svg" alt="">
+                <p>Message Sent!</p>
+            </div>
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+    </div>
+    
+</body>
+</html>
